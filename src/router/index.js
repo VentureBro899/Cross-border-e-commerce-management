@@ -24,7 +24,27 @@ const routes = [
     name: 'brandorderlist',
     component: () => import('@/views/brandOrder/BrandOrderList.vue'),
     meta: { title: '品牌商订单管理', icon: 'el-icon-s-operation' }
-  }
+  },
+  {
+    path: '/brandmyinfo',
+    name: 'brandmyinfo',
+    component: () => import('@/views/brandMyInfo/BrandMyInfo.vue'),
+    meta: { title: '品牌商信息管理', icon: 'el-icon-s-operation' },
+  },
+  {
+    path: '/addorupdatemyinfo',
+    name: 'addorupdatemyinfo',
+    component: () => import('@/views/addOrUpdateMyInfo/AddOrUpdateMyInfo.vue'),
+    meta: { title: '添加品牌商信息', icon: 'el-icon-s-operation' },
+    hidden: true
+  },
+  {
+    path: '/sellermyinfo',
+    name: 'sellermyinfo',
+    component: () => import('@/views/sellerMyInfo/SellerMyInfo.vue'),
+    meta: { title: '借卖方信息管理', icon: 'el-icon-s-operation' },
+  },
+
   /*{
     path: '/joblist',
     component: () => import('@/views/job/JobListView.vue')
