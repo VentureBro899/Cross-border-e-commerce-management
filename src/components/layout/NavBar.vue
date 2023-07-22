@@ -16,6 +16,7 @@ export default {}
   background: #fff;
   margin: auto 20px;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  margin: 0px;
   h1 {
     line-height: 46px;
     height: 100%;

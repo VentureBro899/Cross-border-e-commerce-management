@@ -10,14 +10,14 @@ const routes = [
     name: 'sellerorderlist',
     component: () => import('@/views/sellerOrder/SellerOrderList.vue'),
     meta: { title: '借卖方订单管理', icon: 'el-icon-s-operation' },
-    children: [
+    /*children: [
       {
         path: '/sellerorderlist',
         name: 'sellerorderlist',
         component: () => import('@/views/sellerOrder/SellerOrderList.vue'),
         meta: { title: '物流管理', icon: 'el-icon-s-operation' }
       }
-    ]
+    ]*/
   },
   {
     path: '/brandorderlist',
@@ -44,43 +44,18 @@ const routes = [
     component: () => import('@/views/sellerMyInfo/SellerMyInfo.vue'),
     meta: { title: '借卖方信息管理', icon: 'el-icon-s-operation' },
   },
-
-  /*{
-    path: '/joblist',
-    component: () => import('@/views/job/JobListView.vue')
+  {
+    path: '/dictionarylist',
+    name: 'dictionarylist',
+    component: () => import('@/views/dictionary/DictionaryList.vue'),
+    meta: { title: '参数管理', icon: 'el-icon-s-management' }
   },
   {
-    path: '/jobupdate/:id',
-    component: () => import('@/views/job/JobUpdateView.vue')
-  },
-  {
-    path: '/pptlist',
-    component: () => import('@/views/ppt/PPTListView.vue')
-  },
-  {
-    path: '/pptupdate/:id',
-    component: () => import('@/views/ppt/PPTUpdateView.vue')
-  },
-  {
-    path: '/pptadd',
-    component: () => import('@/views/ppt/PPTAddVIew.vue')
-  },
-  {
-    path: '/notice',
-    component: () => import('@/views/notice/NoticeUpdateView.vue')
-  },
-  {
-    path: '/general',
-    component: () => import('@/views/GeneralView.vue')
-  },
-  {
-    path: '/404',
-    component: () => import('@/views/right/404.vue')
-  },
-  {
-    path: '/noright',
-    component: () => import('@/views/right/noright.vue')
-  } */
+    path: '/wishlist',
+    name: 'wishlist',
+    component: () => import('@/views/wish/wishList.vue'),
+    meta: { title: '借卖方-心愿单', icon: 'el-icon-s-opportunity' }
+  }
 ]
 
 const router = new VueRouter({
