@@ -2,14 +2,7 @@
   <div>
     <el-row class="tac">
       <el-col>
-        <el-menu
-          default-active="2"
-          class="el-menu-vertical-demo"
-          background-color="#545c64"
-          text-color="#fff"
-          active-text-color="#ffd04b"
-          router
-        >
+        <el-menu default-active="2" class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" router>
           <SideItem :tree="routes"> </SideItem>
         </el-menu>
       </el-col>
@@ -35,7 +28,7 @@ export default {
   methods: {
     getRoutes() {
       // 获取所有路由表
-      this.routes = this.$router.options.routes
+      this.routes = this.$router.options.routes[0].children
     }
   },
   computed: {}
