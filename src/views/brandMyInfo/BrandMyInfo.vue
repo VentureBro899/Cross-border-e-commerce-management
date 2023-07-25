@@ -191,24 +191,26 @@ export default {
       this.$router.push({ path: "/addorupdatemyinfo", query: row });
     },
     getParam() {
+      let tempCompanyInfo = [];
       this.tempData = this.$route.query;
       if (JSON.stringify(this.tempData) === "{}") return;
       let flag = true;
-
-      try {
-        this.companyInfo.forEach((element) => {
-          console.log(element.c_name === this.tempData.c_name);
-          if (element.c_name === this.tempData.c_name) {
-            element = this.tempData;
-            throw "跳出循环";
-          }
-        });
-      } catch (error) {
-        flag = false;
-      }
+      console.log(this.companyInfo);
+      this.companyInfo.forEach((element) => {
+        debugger;
+        // console.log(element.c_name === this.tempData.c_name);
+        if (element.c_name === this.tempData.c_name) {
+          tempCompanyInfo = [...tempCompanyInfo, this.tempData]
+          flag = false
+        }
+        if (element.c_name !== this.tempData.c_name) {
+          tempCompanyInfo = [...tempCompanyInfo, element]
+        }
+      });
       if (flag) {
-        this.companyInfo = [...this.companyInfo, this.tempData];
+        tempCompanyInfo = [...tempCompanyInfo, this.tempData]
       }
+      this.companyInfo = tempCompanyInfo;
     },
     handleRemove(file) {
       console.log(file);
