@@ -54,6 +54,18 @@ const routes = [
       meta: { title: '参数管理', icon: 'el-icon-s-management' }
     },
     {
+      path: '/sellerShopInformation',
+      name: 'sellerShopInformation',
+      component: () => import('@/views/sellerShopInformation/sellerShopInformation.vue'),
+      meta: { title: '借卖方-店铺管理', icon: 'el-icon-s-opportunity' }
+    },
+    {
+      path: '/sellerCommodityInformation',
+      name: 'sellerCommodityInformation',
+      component: () => import('@/views/sellerCommodityInformation/sellerCommodityInformation.vue'),
+      meta: { title: '借卖方-商品阅览', icon: 'el-icon-s-opportunity' }
+    },
+    {
       path: '/wishlist',
       name: 'wishlist',
       component: () => import('@/views/wish/wishList.vue'),

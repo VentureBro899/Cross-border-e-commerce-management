@@ -50,7 +50,7 @@ export default {
       console.log(this.myinfo);
     },
     toMyStores() {
-      this.$router.push("店铺路由");
+      this.$router.push("/sellerShopInformation");
     },
   },
 };
