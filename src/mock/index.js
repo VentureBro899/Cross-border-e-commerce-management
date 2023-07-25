@@ -1,5 +1,4 @@
 const Mock = require('mockjs') // 导入依赖模块
-
 // 返回一个函数
 module.exports = function (middlewares, devServer) {
   // 订单管理mock

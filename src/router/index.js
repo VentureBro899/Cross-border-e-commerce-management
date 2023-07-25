@@ -8,7 +8,20 @@ const routes = [
   {
     path: '/',
     component: Layout,
-    children: [{ // 要在侧栏展示的路由作为根组件的children
+    children: [
+      {
+        path: '/brandAddProduct',
+        name: 'BrandAddProduct',
+        component: () => import('@/views/brandAddProduct/BrandAddProduct.vue'),
+        meta: { title: '品牌商商品信息管理', icon: 'el-icon-s-operation' }
+      },
+      {
+        path: '/brandProduct',
+        name: 'BrandProduct',
+        component: () => import('@/views/brandAddProduct/BrandProduct.vue'),
+        meta: { title: '品牌商商品主图', icon: 'el-icon-s-operation' }
+      },
+      { // 要在侧栏展示的路由作为根组件的children
       path: '/sellerorderlist',
       name: 'sellerorderlist',
       component: () => import('@/views/sellerOrder/SellerOrderList.vue'),
